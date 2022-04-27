@@ -2,16 +2,17 @@ pipeline {
   agent any
 
   tools { nodejs 'node 18.0.0' }
-  // agent {
-  //   docker {
-  //     image 'node:lts-bullseye-slim'
-  //     args '-p 3000:3000 --network=npm_proxy'
-  //   }
-  // }
+
   stages {
     stage('Build') {
       steps {
         sh 'npm install'
+      }
+    }
+
+    stage('Test') {
+      steps {
+        sh './jenkins/scripts/test.sh'
       }
     }
   }
