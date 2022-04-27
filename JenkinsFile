@@ -18,7 +18,6 @@ pipeline {
 
     stage('Run') {
       steps {
-        sh 'export NODE_OPTIONS=--openssl-legacy-provider'
         sh 'npm start'
       }
     }
