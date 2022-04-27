@@ -1,10 +1,10 @@
 pipeline {
-  agent {
-    docker {
-      image 'node:lts-bullseye-slim'
-      args '-p 3000:3000 --network=npm_proxy'
-    }
-  }
+  // agent {
+  //   docker {
+  //     image 'node:lts-bullseye-slim'
+  //     args '-p 3000:3000 --network=npm_proxy'
+  //   }
+  // }
   stages {
     stage('Build') {
       steps {
