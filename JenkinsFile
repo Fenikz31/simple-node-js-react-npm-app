@@ -9,6 +9,7 @@ pipeline {
     stage('Build') {
       steps {
         sh 'echo install dependencies'
+        sh 'echo > npm install'
       }
       steps {
         sh 'npm install'
